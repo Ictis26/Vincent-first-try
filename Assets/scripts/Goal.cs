@@ -1,13 +1,31 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.UI;
+
 
 public class Goal : MonoBehaviour
 {
+    public Man player;
+    private GameObject Körper;
+    private GameObject Tor;
+    private GameObject Quad;
 
-    private void OnCollisionExit(Collision collision)
+    private GameObject canvas; 
+
+    void Start()
     {
-        Debug.Log("Tor");
+        Canvas render = gameObject.GetComponentInChildren<Canvas>();
+        canvas = render.gameObject;
+        canvas.SetActive(false);
+    }
+    void OnTriggerEnter(Collider col)
+    {
+        canvas.SetActive(true);
+      
+    }
+
+    private void Reset()
+    {
+        player.Reset();
     }
 }
