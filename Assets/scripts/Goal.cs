@@ -10,10 +10,13 @@ public class Goal : MonoBehaviour
     private GameObject Tor;
     private GameObject Quad;
 
-    private GameObject canvas; 
+    private GameObject canvas;
+    public GameObject effect;
+    public Transform[] fxspots;
 
     void Start()
     {
+        
         Canvas render = gameObject.GetComponentInChildren<Canvas>();
         canvas = render.gameObject;
         canvas.SetActive(false);
@@ -21,11 +24,19 @@ public class Goal : MonoBehaviour
     void OnTriggerEnter(Collider col)
     {
         canvas.SetActive(true);
-      
-    }
+        Instantiate(effect, fxspots[0].position, fxspots[0].rotation);
+        Instantiate(effect, fxspots[0].position, fxspots[0].rotation);
+        Invoke("ResetGame", 5f);
 
-    private void Reset()
+
+
+    }
+        void ResetGame()
     {
+        //DestroyImmediate(effect, true);
+        canvas.SetActive(false);
         player.Reset();
     }
+
+
 }
