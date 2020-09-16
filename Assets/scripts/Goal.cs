@@ -6,9 +6,8 @@ using UnityEngine;
 public class Goal : MonoBehaviour
 {
     public Man player;
-    private GameObject Körper;
-    private GameObject Tor;
-    private GameObject Quad;
+    public Man ball;
+   
 
     private GameObject canvas;
     public GameObject effect;
@@ -36,6 +35,7 @@ public class Goal : MonoBehaviour
         //DestroyImmediate(effect, true);
         canvas.SetActive(false);
         player.Reset();
+        ball.Reset();
     }
 
 
