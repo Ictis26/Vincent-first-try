@@ -9,6 +9,7 @@ public class Man : MonoBehaviour
     public float walkSpeed = 9;
     public float turnSpeed = 900;
     public float sidewaysSpeed = 6;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -38,6 +39,7 @@ public class Man : MonoBehaviour
 
     public void Reset()
     {
-        
+        transform.position = new Vector3(Random.Range(-25f, 25f), 0.992f, Random.Range(-42f, 6f));
+
     }
 }
