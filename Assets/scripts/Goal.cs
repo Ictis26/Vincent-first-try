@@ -6,12 +6,14 @@ using UnityEngine;
 public class Goal : MonoBehaviour
 {
     public Man player;
-    public Man ball;
+    public Ball ball;
+   
    
 
     private GameObject canvas;
     public GameObject effect;
     public Transform[] fxspots;
+    public UI Scoreboard;
 
     void Start()
     {
@@ -25,8 +27,8 @@ public class Goal : MonoBehaviour
         canvas.SetActive(true);
         Instantiate(effect, fxspots[0].position, fxspots[0].rotation);
         Instantiate(effect, fxspots[0].position, fxspots[0].rotation);
-        Invoke("ResetGame", 5f);
-
+        Invoke("ResetGame", 6f);
+        Scoreboard.increaseScore();
 
 
     }
@@ -36,6 +38,8 @@ public class Goal : MonoBehaviour
         canvas.SetActive(false);
         player.Reset();
         ball.Reset();
+
+       
     }
 
 
