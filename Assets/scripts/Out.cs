@@ -12,9 +12,6 @@ public class Out : MonoBehaviour
 
     void Start()
     {
-
-        Canvas render = gameObject.GetComponentInChildren<Canvas>();
-        canvas = render.gameObject;
         canvas.SetActive(false);
     }
 
