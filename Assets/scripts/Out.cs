@@ -22,7 +22,7 @@ public class Out : MonoBehaviour
     {
         canvas.SetActive(true);
         Invoke("ResetGame", 4f);
-        Scoreboard.decreaseScore();
+        Scoreboard.resetScore();
     }
     void ResetGame()
     {

@@ -28,8 +28,8 @@ public class UI : MonoBehaviour
         score++;
     }
 
-    public void decreaseScore()
+    public void resetScore()
     {
-        score--;
+        score=0;
     }
 }
