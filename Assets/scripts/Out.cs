@@ -21,7 +21,7 @@ public class Out : MonoBehaviour
     void OnTriggerEnter(Collider col)
     {
         canvas.SetActive(true);
-        Invoke("ResetGame", 3f);
+        Invoke("ResetGame", 4f);
         Scoreboard.decreaseScore();
     }
     void ResetGame()
