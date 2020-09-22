@@ -27,7 +27,7 @@ public class Goal : MonoBehaviour
         canvas.SetActive(true);
         Instantiate(effect, fxspots[0].position, fxspots[0].rotation);
         Instantiate(effect, fxspots[0].position, fxspots[0].rotation);
-        Invoke("ResetGame", 6f);
+        Invoke("ResetGame", 5f);
         Scoreboard.increaseScore();
 
 

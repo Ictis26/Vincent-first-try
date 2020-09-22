@@ -21,10 +21,15 @@ public class UI : MonoBehaviour
     {
         textComponent.text = "Score:"+score.ToString();
         
-            
     }
+
     public void increaseScore()
     {
         score++;
+    }
+
+    public void decreaseScore()
+    {
+        score--;
     }
 }
